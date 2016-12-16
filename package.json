@@ -1,0 +1,35 @@
+{
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "name": "obj-select",
+  "version": "0.0.0",
+  "description": "Arrays as key paths",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "node test/index.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/obj-select.git"
+  },
+  "keywords": [
+    "object",
+    "pick",
+    "pluck",
+    "array",
+    "path",
+    "select"
+  ],
+  "author": "nichoth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/obj-select/issues"
+  },
+  "homepage": "https://github.com/nichoth/obj-select#readme"
+}
