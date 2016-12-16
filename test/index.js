@@ -2,17 +2,22 @@ var test = require('tape')
 var select = require('../')
 
 test('find a node in an object', function (t) {
-    t.plan(2)
+    t.plan(3)
     var obj = {
         a: 1,
         b: {
             bb: 'in here'
         },
-        c: 2
+        c: 2,
+        d: {
+            dd: 'dd'
+        }
     }
     var val = select(n => n === 'in here', obj, ['b','bb', 'other'])
     t.equal(val[0], 'in here', 'should return the node')
     t.equal(val[1], 'other', 'should return remaining list items')
+    var val2 = select(n => typeof n === 'string', obj, ['d', 'dd', [1,2]])
+    t.deepEqual(val2, [ 'dd', [1,2] ], 'should return arrays')
 })
 
 test('find a function', function (t) {
