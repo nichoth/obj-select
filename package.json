@@ -1,17 +1,19 @@
 {
-  "devDependencies": {
-    "tap-spec": "^4.1.1",
-    "tape": "^4.6.3"
-  },
   "name": "obj-select",
   "version": "0.0.0",
-  "description": "Arrays as key paths",
+  "description": "Arrays as object key paths",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {},
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
   "scripts": {
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags && npm publish",
     "test": "node test/index.js | tap-spec"
   },
   "repository": {
