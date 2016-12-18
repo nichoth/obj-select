@@ -1,6 +1,6 @@
 {
   "name": "obj-select",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Arrays as object key paths",
   "main": "index.js",
   "directories": {
