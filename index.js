@@ -15,7 +15,10 @@ Select.fn = function (tree, path) {
 
 Select.andCall = function (tree, path) {
     var match = Select.fn(tree, path)
-    return match[0].apply(null, [].concat(match[1]))
+    var args = match[1] ?
+        [].concat(match[1]) :
+        []
+    return match[0].apply(null, args)
 }
 
 module.exports = Select
